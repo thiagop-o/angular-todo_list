@@ -1,4 +1,5 @@
 import { NgModule } from "@angular/core";
+import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from "@angular/platform-browser";
 
 import { AppRoutingModule } from "./app-routing.module";
@@ -19,7 +20,7 @@ import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, ReadAllComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatToolbarModule, MatCardModule, MatButtonModule, MatIconModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatToolbarModule, MatCardModule, MatButtonModule, MatIconModule,HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
