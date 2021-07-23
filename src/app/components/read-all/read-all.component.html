@@ -5,7 +5,7 @@
     </div>
 
 
-    <button class="novo-todo mat-elevation-z8" mat-raised-button color="primary">NOVO TO-DO</button>
+    <button (click)="create()" class="novo-todo mat-elevation-z8" mat-raised-button color="primary">NOVO TO-DO</button>
     <div class="content" *ngFor="let item of list">
         <mat-card class="mat-elevation-z8">
             <p>Data para finalizar: {{ item.dataParaFinalizar }}</p>
@@ -14,8 +14,8 @@
               <mat-card-subtitle>{{ item.descricao }}</mat-card-subtitle>
             </mat-card-header>
             <div class="actions">
-                <button mat-mini-fab color="primary">
-                    <mat-icon>done</mat-icon>
+                <button (click)="finalizar(item)" mat-mini-fab color="primary">
+                    <mat-icon >done</mat-icon>
                 </button>
                 <button mat-mini-fab color="accent">
                     <mat-icon>edit</mat-icon>

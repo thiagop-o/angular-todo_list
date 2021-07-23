@@ -39,10 +39,21 @@ export class ReadAllComponent implements OnInit {
     this.service.delete(id).subscribe((resposta) => {
       if (resposta === null){
         this.service.message('Task Deletada com Sucesso');
-        this.list = this.list.filter(todo => todo.id !== id);
+        this.list = this.list.filter((todo) => todo.id !== id);
       }
     })
+  }
+  finalizar(item: Todo):void {
+    item.finalizado = true;
+    this.service.update(item).subscribe(() => {
+      this.service.message('Task Finalizada com Sucesso');
+      this.list = this.list.filter((todo) => todo.id !== item.id);
+      this.closed++;
+    });
   }  
+  create(): void {
+    this.router.navigate(['create']);
+  }
 
   tasksFinalizadas(): void {
     this.router.navigate(['finalizados']);

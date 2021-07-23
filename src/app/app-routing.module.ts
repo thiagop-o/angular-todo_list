@@ -1,3 +1,4 @@
+import { CreateComponent } from './components/create/create.component';
 import { FinalizadosComponent } from './components/finalizados/finalizados.component';
 import { ReadAllComponent } from './components/read-all/read-all.component';
 import { NgModule } from '@angular/core';
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'finalizados',
     component: FinalizadosComponent
+  },
+  {
+    path: 'create',
+    component: CreateComponent
   }
 ];
 
