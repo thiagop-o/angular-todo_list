@@ -14,6 +14,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 
 
@@ -21,7 +23,7 @@ import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, ReadAllComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatToolbarModule, MatCardModule, MatButtonModule, MatIconModule,HttpClientModule,MatBadgeModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatToolbarModule, MatCardModule, MatButtonModule, MatIconModule,HttpClientModule,MatBadgeModule,MatSnackBarModule],
   providers: [],
   bootstrap: [AppComponent],
 })

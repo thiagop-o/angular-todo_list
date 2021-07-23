@@ -20,7 +20,7 @@
                 <button mat-mini-fab color="accent">
                     <mat-icon>edit</mat-icon>
                 </button>
-                <button mat-mini-fab color="warn">
+                <button (click)="delete(item.id)"   mat-mini-fab color="warn">
                     <mat-icon>delete</mat-icon>
                 </button>
             </div>
